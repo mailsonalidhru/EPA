@@ -46,27 +46,6 @@ for rec in arrFileContents:
             #print(rec[8])
             if (rec[8].find("PM2.5") != -1):
                 dictOfParameter[rec[13] + "," + rec[8] + "," + rec[52]] = rec[51]  + ", " +  rec[27]
-
-
-        #if rec[13] in dictOfParameter:
-        #    dictOfParamValue = dictOfParameter[rec[13]]
-        #    if rec[8] in dictOfParamValue:
-        #        lstCity = []
-        #        lstCity = dictOfParamValue[rec[8]]
-        #        lstCity.append(rec[52] + "," + rec[51] + "," + rec[27])
-        #        dictOfParamValue[rec[8]] = lstCity
-        #    else:
-        #        dictOfParamValue[rec[8]] = [rec[52], rec[51], rec[27]]
-        #    dictOfParameter[rec[13]] = dictOfParamValue
-        #else:
-            # If Year is not in the Dictionary
-        #    dictOfYear = {}
-        #    dictOfParamValue = {}
-        #    listCity = []
-        #    listCity.append(rec[52] + "," + rec[51] + "," + rec[27])
-        #    dictOfParamValue[rec[8]] = listCity
-        #    dictOfYear[rec[13]] = dictOfParamValue 
-        #    dictOfParameter[rec[13]] = dictOfYear
         
         if (rec[8].find("PM2.5") != -1):
             dictOfParameter[rec[13] + "," + rec[8] + "," + rec[52]] = rec[51]  + ", " +  rec[27]
@@ -76,23 +55,8 @@ print ("\n ################ Air Quality Sites near SFO, California #############
 pprint.pprint(dictOfSites)
         
 print ("\n ################ City / State with Pollutant PM2.5 year wise ##############################")
-#pprint.pprint(dictOfParameter)
+pprint.pprint(dictOfParameter)
 
-
-#year wise values of unique AQS code 9 Column Parameter_name
-#PM2.5
-
-# Year + Parameter_name + County + City + Avg Value  =   14 + 9 + 51 + 52 + 28
-
-
-        # print(rec[54])  
-        # mnth, dt, yr = rec[54].split("/")
-        
-
-
-
-
-#How many times a AQS Code was measured by the monitor in a particular year
 
 
 
